@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/paynow',[parseUrl, parseJson], (req, res) => {
-        if(!paymentDetails.amount || !paymentDetails.customerId || !paymentDetails.customerEmail || !paymentDetails.customerPhone) {
+        if(!req.body.amount || !req.body.email || !req.body.phone) {
             res.status(400).send('Payment failed')
         } else {
             var params = {};
@@ -30,10 +30,10 @@ app.post('/paynow',[parseUrl, parseJson], (req, res) => {
             params['INDUSTRY_TYPE_ID'] = 'Retail';
             params['ORDER_ID'] = 'TEST_'  + new Date().getTime();
             params['CUST_ID'] = 'customer_001';
-            params['TXN_AMOUNT'] = paymentDetails.amount.toString();
+            params['TXN_AMOUNT'] = req.body.amount.toString();
             params['CALLBACK_URL'] = 'http://localhost:3000/callback';
-            params['EMAIL'] = paymentDetails.customerEmail;
-            params['MOBILE_NO'] = paymentDetails.customerPhone.toString();
+            params['EMAIL'] = req.body.email;
+            params['MOBILE_NO'] = req.body.phone.toString();
 
 
             checksum_lib.genchecksum(params, config.PaytmConfig.key, function (err, checksum) {
