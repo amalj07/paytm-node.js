@@ -5,9 +5,6 @@ const qs = require('querystring')
 
 const app = express()
 
-app.use(express.static(__dirname + '/views'))
-app.set("view engine", "ejs")
-
 // Middleware for body parsing
 const parseUrl = express.urlencoded({ extended: false })
 const parseJson = express.json({ extended: false })
