@@ -5,6 +5,9 @@ const qs = require('querystring')
 
 const app = express()
 
+app.use(express.static(__dirname + '/views'))
+app.set("view engine", "ejs")
+
 // Middleware for body parsing
 const parseUrl = express.urlencoded({ extended: false })
 const parseJson = express.json({ extended: false })
@@ -17,12 +20,6 @@ app.get('/', (req, res) => {
 })
 
 app.post('/paynow',[parseUrl, parseJson], (req, res) => {
-  var paymentDetails = {
-            amount: req.body.amount,
-            customerId: req.body.name,
-            customerEmail: req.body.email,
-            customerPhone: req.body.phone
-        }
         if(!paymentDetails.amount || !paymentDetails.customerId || !paymentDetails.customerEmail || !paymentDetails.customerPhone) {
             res.status(400).send('Payment failed')
         } else {
@@ -32,11 +29,11 @@ app.post('/paynow',[parseUrl, parseJson], (req, res) => {
             params['CHANNEL_ID'] = 'WEB';
             params['INDUSTRY_TYPE_ID'] = 'Retail';
             params['ORDER_ID'] = 'TEST_'  + new Date().getTime();
-            params['CUST_ID'] = paymentDetails.customerId;
-            params['TXN_AMOUNT'] = paymentDetails.amount;
+            params['CUST_ID'] = 'customer_001';
+            params['TXN_AMOUNT'] = paymentDetails.amount.toString();
             params['CALLBACK_URL'] = 'http://localhost:3000/callback';
             params['EMAIL'] = paymentDetails.customerEmail;
-            params['MOBILE_NO'] = paymentDetails.customerPhone;
+            params['MOBILE_NO'] = paymentDetails.customerPhone.toString();
 
 
             checksum_lib.genchecksum(params, config.PaytmConfig.key, function (err, checksum) {
