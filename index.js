@@ -110,14 +110,9 @@ app.post('/callback', (req, res) => {
           console.log('S2S Response: ', response, "\n");
 
           var _result = JSON.parse(response);
-          if (_result.STATUS == 'TXN_SUCCESS') {
-            res.render('response', {
-              'data': _result
-            })
-            // res.send(response)
-          } else {
-            res.send(response)
-          }
+          res.render('response', {
+            'data': _result
+          })
         });
       });
 
