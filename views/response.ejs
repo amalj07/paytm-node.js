@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<div class="my-5">
+    <div style="width: 510px; margin: auto" class="card">
+    <div class="card-body">
+        <center>
+            <h2>Payment Status</h2>
+        </center>
+        <div>
+            <table class="table table-borderless">
+                <tr>
+                    <th>TXNID: </th>
+                    <td><%= data.TXNID %></td>
+                <tr>
+                    <th>BANKTXNID: </th>
+                    <td><%= data.BANKTXNID %></td>
+                </tr>
+                <tr>
+                    <th>TXNAMOUNT: </th>
+                    <td><%= data.TXNAMOUNT %></td>
+                </tr>
+                <tr>
+                    <th>BANKNAME: </th>
+                    <td><%= data.BANKNAME %></td>
+                </tr>
+                <tr>
+                    <th>GATEWAYNAME: </th>
+                    <td><%= data.GATEWAYNAME %></td>
+                </tr>
+                <tr>
+                    <th>STATUS: </th>
+                    <td><%= data.RESPCODE %></td>
+                </tr>
+                <tr>
+                    <th>RESPCODE: </th>
+                    <td><%= data.RESPMSG %></td>
+                </tr>
+                <tr>
+                    <th>RESPMSG: </th>
+                    <td><%= data.STATUS %></td>
+                </tr>
+                <tr>
+                    <th>TXNDATE: </th>
+                    <td><%= data.TXNDATE %></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+  </div>
