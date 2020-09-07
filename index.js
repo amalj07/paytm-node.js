@@ -123,13 +123,6 @@ app.post('/callback', (req, res) => {
   });
 })
 
-app.get('/response', (req, res) => {
-  const response = { "TXNID": "20200907111212800110168780301903443", "BANKTXNID": "12766606912", "ORDERID": "TEST_1599461239165", "TXNAMOUNT": "10.00", "STATUS": "TXN_SUCCESS", "TXNTYPE": "SALE", "GATEWAYNAME": "HDFC", "RESPCODE": "01", "RESPMSG": "Txn Success", "BANKNAME": "HDFC", "MID": "RNBThT66781644549811", "PAYMENTMODE": "NB", "REFUNDAMT": "0.00", "TXNDATE": "2020-09-07 12:17:20.0" }
-  res.render('response', {
-    'data': response
-  })
-})
-
 const port = 3000
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
