@@ -1,3 +1,7 @@
+Note: This is an HTML form post integration method and it has been [depricated](https://developer.paytm.com/docs/v1/payment-gateway/deprecated-flow-integration/) by paytm. The flow is available only for existing integrations.
+
+Update Repo is available [here](https://github.com/amljs/paytm-nodejs-updated)
+
 # Paytm-Node.js Demo App
 
 This is a Paytm payment gateway demo app using Node.js.
