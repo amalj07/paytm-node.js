@@ -1,4 +1,4 @@
-Note: This is an HTML form post integration method and it has been [depricated by paytm](https://developer.paytm.com/docs/v1/payment-gateway/deprecated-flow-integration/). The flow is available only for existing integrations.
+Note: This is an HTML form post integration method and it has been [deprecated by paytm](https://developer.paytm.com/docs/v1/payment-gateway/deprecated-flow-integration/). The flow is available only for existing integrations.
 
 Updated Repo is available [here](https://github.com/amljs/paytm-nodejs-updated)
 
