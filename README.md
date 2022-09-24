@@ -12,7 +12,7 @@ For the Demo App, <https://paytm-nodejs-demo.herokuapp.com>
 
 ## Usage
 
-`git clone https://github.com/amljs/paytm-node.js.git`
+`git clone https://github.com/amalj07/paytm-node.js.git`
 
 `cd paytm-node.js`
 
