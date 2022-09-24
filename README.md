@@ -1,12 +1,12 @@
 Note: This is an HTML form post integration method and it has been [deprecated by paytm](https://developer.paytm.com/docs/v1/payment-gateway/deprecated-flow-integration/). The flow is available only for existing integrations.
 
-Updated Repo is available [here](https://github.com/amljs/paytm-nodejs-updated)
+Updated Repo is available [here](https://github.com/amalj07/paytm-nodejs-updated)
 
 # Paytm-Node.js Demo App
 
 This is a Paytm payment gateway demo app using Node.js.
 
-Check out the [Medium tutorial](https://medium.com/@amljs/integrate-paytm-payment-gateway-using-node-js-2e7f04587aad) to know how it's implemented.
+Check out the [Medium tutorial](https://medium.com/@amalj07/integrate-paytm-payment-gateway-using-node-js-2e7f04587aad) to know how it's implemented.
 
 For the Demo App, <https://paytm-nodejs-demo.herokuapp.com>
 
@@ -28,4 +28,4 @@ For testing credentials, visit <https://developer.paytm.com/docs/testing-integra
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/amljs/paytm-node.js/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/amalj07/paytm-node.js/blob/master/LICENSE) for more information.
